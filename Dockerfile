@@ -6,5 +6,8 @@ RUN python -m unidic download
 WORKDIR /
 COPY . .
 RUN pip install -r requirements.txt
+ENV DEFAULT_SPEED=1
+ENV DEFAULT_LANGUAGE=EN
+ENV DEFAULT_SPEAKER_ID=EN-US
 # EXPOSE 8080
 CMD ["python", "app.py"]
